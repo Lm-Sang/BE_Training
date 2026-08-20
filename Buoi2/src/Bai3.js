@@ -7,7 +7,7 @@ const chiaHaiSo = (a, b) => {
 
 const main = async () => {
   try {
-    const ketQua = chiaHaiSo(10, 0);
+    const ketQua = chiaHaiSo(10, 2);
     console.log("Kết quả: " + ketQua);
   } catch (error) {
     console.error(error.message);
