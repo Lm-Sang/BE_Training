@@ -4,6 +4,7 @@ export const createBookSchema = z.object({
   title: z
     .string("Title is required")
     .min(2, "Title must be at least 2 characters")
+    .max(100, "Title must not exceed 100 characters")
     .regex(
       /^[A-Za-z\s]+$/,
       "Title must not contain special characters or numbers",
@@ -12,6 +13,7 @@ export const createBookSchema = z.object({
   author: z
     .string("Author is required")
     .min(2, "Author must be at least 2 characters")
+    .max(100, "Author must not exceed 100 characters")
     .regex(
       /^[A-Za-z\s]+$/,
       "Author must not contain special characters or numbers",
@@ -23,6 +25,7 @@ export const updateBookSchema = z
     title: z
       .string()
       .min(2, "Title must be at least 2 characters")
+      .max(100, "Title must not exceed 100 characters")
       .regex(
         /^[A-Za-z\s]+$/,
         "Title must not contain special characters or numbers",
@@ -31,6 +34,7 @@ export const updateBookSchema = z
     author: z
       .string()
       .min(2, "Author must be at least 2 characters")
+      .max(100, "Author must not exceed 100 characters")
       .regex(
         /^[A-Za-z\s]+$/,
         "Author must not contain special characters or numbers",
